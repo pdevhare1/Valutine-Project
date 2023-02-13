@@ -6,82 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js"></script>
-    <title>Valutine Project</title>
-    <style>
-      
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-  color: red;
-}
-
-.heart {
-background-color: red;
-display: inline-block;
-height: 30px;
-margin: 0 10px;
-position: relative;
-top: 0;
-/* transform: rotate(90 deg); */
-width: 30px;
-fill: red;
-animation: pulse 1s ease infinite;
-}
-
-.heart:before,
-.heart:after {
-content: "";
-background-color: red;
-border-radius: 50%;
-height: 30px;
-position: absolute;
-width: 30px;
-}
-
-.heart:before {
-top: -15px;
-left: 0;
-}
-
-.heart:after {
-left: 15px;
-top: 0;
-}
-
-@keyframes pulse {
-0% { transform: scale(1); }
-45% { transform: scale(1.3); }
-100% { transform: scale(1); }
-} 
-
-
-    </style>
+    <title>Valentine Project</title>
   </head>
   <body>
-    <!-- <div class="main">
-      <h1>Rose Day</h1> -->
-      <div id="heartContainer">
-        <div class="heart" onclick="createHeart()"></div>
-        
-      </div>
-      
-      <!-- </div> -->
-      <!-- <img src="./Rose-Day.png" alt="Rose-Day" class="rose-heart" /> -->
+    <div id="heartContainer">
+      <div class="heart" onclick="createHeart()"></div>
     </div>
-    <script>
-    var heartCount = 0;
-
-function createHeart() {
-  if (heartCount < 7) {
-    var heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.onclick = createHeart;
-    document.getElementById("heartContainer").appendChild(heart);
-    heartCount++;
-  } else {
-    alert("No more hearts can be generated");
-  }
-}
-
-    </script>
   </body>
 </html>
